@@ -1,0 +1,87 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- selected_info
+- selected_list
+- selected_event
+- selected_book
+- got_email
+- got_total_tickets
+- selected_no
+- good_bye
+- thank_you
+responses:
+  utter_greet:
+  - text: Hello, Hope you are doing well! Welcome to events.org
+  utter_info_and_event:
+  - buttons:
+    - payload: Please give more information about events.org
+      title: More Information
+    - payload: Please display the list of events
+      title: List of Events
+    text: Please select any one option to proceed
+  utter_about_eventsorg:
+  - text: Events.org is an event management company established in the year 2015.
+      It has organised a total of 200 events till date. And it is one of the leading
+      event management company in India.
+  utter_select_event_list:
+  - buttons:
+    - payload: Please display the list of events
+      title: List of events
+    - payload: No, I don't want to proceed further
+      title: No thanks
+    text: Please select any one option to proceed
+  utter_display_list:
+  - buttons:
+    - payload: Could you please select Lolbagh
+      title: Lolbagh
+    - payload: Could you please select Concert Night by Arijit Singh
+      title: Concert Night by Arijit Singh
+    - payload: Could you please select Stand Up Comedy by Abhishek Upmanyu
+      title: Stand Up Comedy by Abhishek Upmanyu
+    - payload: Could you please select Nucleya
+      title: Nucleya
+    - payload: Could you please select Bangalore Open Air 2020
+      title: Bangalore Open Air 2020
+    - payload: No, I don't want to proceed further
+      title: No thanks
+    text: For more information about the event, please select the event
+  utter_ask_book_tickets:
+  - buttons:
+    - payload: Please book the tickets
+      title: Book tickets
+    - payload: Please display the list of events
+      title: List of events
+    - payload: No, I don't want to proceed further
+      title: No thanks
+    text: Please select any one option to proceed
+  utter_ask_total_tickets:
+  - text: "Please enter total number of tickets (eg: 2)"
+  utter_ask_email:
+  - text: Please enter your email id (Please enter an valid email id)
+  utter_thanks:
+  - text: Thank you. Enjoy the event
+  utter_goodbye:
+  - text: If you would like to buy tickets then please do reach me out
+  utter_welcome:
+  - text: Your Welcome
+  utter_bye:
+  - text: Bye. Take care!
+actions:
+- utter_greet
+- utter_info_and_event
+- utter_about_eventsorg
+- utter_select_event_list
+- utter_display_list
+- event_description
+- utter_ask_book_tickets
+- utter_ask_total_tickets
+- event_total
+- utter_ask_email
+- email_total
+- utter_thanks
+- utter_goodbye
+- utter_welcome
+- utter_bye
